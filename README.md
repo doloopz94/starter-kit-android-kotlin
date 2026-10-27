@@ -1,4 +1,4 @@
-# Starter Kit Android Kotlin — ala alur kerja di video M Zidanfath
+# Starter Kit Android Kotlin
 
 Starter kit ini meniru 4 pilar dari video itu, disesuaikan untuk mata kuliah
 Pemrograman Mobile (Kotlin, Android di VS Code) yang kamu ajarkan:
