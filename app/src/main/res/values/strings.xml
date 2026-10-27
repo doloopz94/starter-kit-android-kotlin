@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Starter Mobile</string>
+    <string name="judul_starter">Starter Mobile</string>
+    <string name="subjudul_starter">Kerangka proyek Android Kotlin — isi docs dulu, plan dulu, baru ngoding.</string>
+    <string name="hint_nama">Nama lengkap</string>
+    <string name="tombol_sapa">Sapa</string>
+    <string name="error_nama_kosong">Nama tidak boleh kosong</string>
+    <string name="hasil_sapaan">Halo, %1$s!</string>
+    <string name="toast_sapaan">Sapaan ditampilkan</string>
+</resources>
