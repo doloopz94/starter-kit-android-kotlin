@@ -20,9 +20,7 @@ Pemrograman Mobile (Kotlin, Android di VS Code) yang kamu ajarkan:
 
 ## Penting: kit ini BUKAN fullstack seperti di video
 
-Video itu memakai boilerplate **web fullstack** (proyek warehouse
-management, banyak package, ada RBAC, settings, dan server).
-Kit ini **bukan** itu. Kit ini adalah boilerplate **Android Kotlin
+Kit ini adalah boilerplate **Android Kotlin
 saja**: 1 layar, tanpa server, tanpa database, tanpa login/RBAC,
 tanpa API. Yang sama dengan video hanyalah **cara kerjanya**
 (skills + dokumen + plan dulu + boilerplate yang dipakai ulang),
