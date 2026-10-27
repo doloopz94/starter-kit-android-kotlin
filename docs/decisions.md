@@ -3,6 +3,20 @@
 Setiap keputusan penting dicatat di sini: apa, kenapa, dan apa
 konsekuensinya. Keputusan baru ditambahkan di atas (paling baru dulu).
 
+## ADR-003 — Ikon launcher vector drawable, bukan PNG mipmap
+
+- **Tanggal:** 2026-10-27 (saat menyiapkan versi siap-mahasiswa)
+- **Keputusan:** `AndroidManifest.xml` merujuk ke
+  `@drawable/ic_launcher` (file XML vector), bukan lagi
+  `@mipmap/ic_launcher` (PNG).
+- **Alasan:** Repo GitHub hanya berisi file teks (konektor GitHub
+  tidak bisa mengunggah PNG), sehingga mahasiswa yang clone harus
+  bisa langsung build tanpa file biner tambahan.
+- **Konsekuensi:** Ikonnya sederhana (kotak ungu + lingkaran).
+  Mahasiswa boleh menggantinya dengan ikon sendiri nanti, termasuk
+  kembali ke mipmap PNG bila mau. File PNG lama di ZIP bersifat
+  opsional dan tidak lagi dirujuk manifest.
+
 ## ADR-001 — UI XML + AppCompat, bukan Compose
 
 - **Tanggal:** 2026-10-27 (saat starter kit dibuat)

@@ -27,20 +27,20 @@ tanpa API. Yang sama dengan video hanyalah **cara kerjanya**
 bukan isi teknisnya. Kalau kamu mau varian fullstack web juga,
 itu paket terpisah yang harus dibuat dengan stack yang dipilih dulu.
 
-## Kalau clone dari GitHub: 11 file biner belum ada di repo
+## Kalau clone dari GitHub: satu langkah sebelum build pertama
 
-Repo GitHub kit ini hanya berisi file teks, karena konektor GitHub
-tidak bisa mengunggah file biner. Setelah clone, lengkapi dulu 11
-file ini dari ZIP starter kit (atau buat ulang ikon launcher di
-Android Studio via Image Asset):
+Repo GitHub kit ini berisi file teks saja, dan itu sudah cukup
+untuk build — dengan dua catatan:
 
-- `app/src/main/res/mipmap-*/ic_launcher.png` dan
-  `ic_launcher_round.png` (10 file, 5 densitas)
-- `gradle/wrapper/gradle-wrapper.jar`
-
-Tanpa file-file itu build akan gagal (manifest merujuk ke
-`@mipmap/ic_launcher`, dan `gradlew` butuh wrapper jar-nya).
-Setelah file-file itu disalin ke tempatnya, build seperti biasa.
+- **Ikon sudah vector:** manifest merujuk ke
+  `@drawable/ic_launcher` (file XML), bukan lagi PNG mipmap,
+  jadi tidak ada file ikon yang perlu disalin. Lihat ADR-003 di
+  `docs/decisions.md`.
+- **Wrapper jar dibuat sekali:** `gradle-wrapper.jar` tidak ada di
+  repo. Bila Gradle sudah terpasang, jalankan sekali di folder
+  proyek: `gradle wrapper --gradle-version 8.7`, lalu build dengan
+  `.\gradlew installDebug` seperti biasa. Panduan lengkap untuk
+  mahasiswa ada di `PANDUAN-MAHASISWA.md`.
 
 ## Pakai di VS Code dengan OpenCode (atau agent lain)
 
