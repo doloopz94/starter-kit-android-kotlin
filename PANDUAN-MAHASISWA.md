@@ -6,13 +6,10 @@
 
 ## [DOSEN ISI — wajib dilengkapi sebelum dibagikan]
 
-- **Tema / ruang lingkup tugas akhir:** [ISI]
-- **Tenggat pengumpulan:** [ISI TANGGAL & JAM]
-- **Cara pengumpulan:** [ISI: link repo / file / formulir]
-- **Format yang dikumpulkan:** [ISI: mis. link repo + video demo / laporan]
-- **Aturan penggunaan AI untuk tugas ini:** [ISI: apa yang boleh
-  dan tidak boleh dibantu AI, dan apa yang harus ditulis sendiri]
-- **Rubrik / kriteria penilaian:** [ISI atau lampirkan]
+- **Tema / ruang lingkup tugas akhir:** Pendukung Sistem UMKM
+- **Tenggat pengumpulan:** -
+- **Cara pengumpulan:** link repo
+- **Format yang dikumpulkan:** link repo + video demo
 
 Bagian di bawah ini berlaku apa pun isi brief di atas, kecuali
 dosen mengubahnya secara eksplisit.
