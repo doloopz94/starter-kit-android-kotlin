@@ -54,7 +54,9 @@ agent lain:
    OpenCode membaca `AGENTS.md` di root proyek, dan mencari skill di
    `.opencode/skills/`, `.claude/skills/`, dan `.agents/skills/` —
    jadi folder `.agents/skills/` di kit ini sudah berada di lokasi
-   yang dicari OpenCode. Tiap `SKILL.md` di kit ini sudah diberi
+   yang dicari OpenCode. Skill upstream di `.github/skills/` dibaca
+   lewat `opencode.json` di root proyek (lihat bagian Skill tambahan
+   dari upstream di bawah). Tiap `SKILL.md` di kit ini sudah diberi
    frontmatter `name` + `description` yang wajib agar skill
    ditemukan.
 3. Di prompt pertama, tulis eksplisit (jangan mengandalkan tebakan):
@@ -113,6 +115,7 @@ kirimkan pesan errornya, jangan ditebak-tebak.
 ```
 AGENTS.md                     Aturan kerja untuk AI (plan-first, wajib dibaca AI)
 Agent.md                      Panduan arsitektur upstream (lihat "Skill tambahan dari upstream" di bawah)
+opencode.json                 Konfigurasi OpenCode: skill upstream terbaca tanpa disalin
 .agents/skills/               5 skill yang dipakai AI di setiap proyek
   kotlin-clean-code/
   android-ui-guidelines/
@@ -176,6 +179,25 @@ folder skill yang dibutuhkan ke folder skill bawaan agent yang dipakai
 (mis. `.opencode/skills/` atau `.claude/skills/`). Muat satu topik
 saja per sesi, jangan semua sekaligus. Skrip emulator hanya jalan
 bila ada emulator/ADB dan tidak dijalankan otomatis oleh kit ini.
+
+### Peta pemakaian (mana dipakai kapan)
+
+- **Wajib tiap tugas:** 5 skill inti di `.agents/skills/` (gaya Kotlin,
+  layout XML, lifecycle/navigasi, validasi, checklist akhir).
+- **Referensi lanjutan, hanya bila plan menyebutkannya:** 17 skill di
+  `.github/skills/`. Contoh: `android-testing` bila menambah unit test,
+  `gradle-build-performance` bila build terasa lambat,
+  `android-accessibility` bila memeriksa aksesibilitas layar. Jangan
+  memuat skill migrasi (XML ke Compose / RxJava ke Coroutines) untuk
+  tugas yang harus tetap XML. Aturan lengkapnya ada di bagian 6
+  `AGENTS.md`.
+- File `opencode.json` di root proyek mendaftarkan `.github/skills`
+  sebagai sumber skill OpenCode, jadi 17 skill itu terbaca tanpa
+  disalin. Syaratnya: jalankan OpenCode dari root proyek (bukan
+  subfolder), restart OpenCode setelah file ini ditambahkan, dan pakai
+  OpenCode versi yang mendukung array `skills` (teruji di 1.19.5; cek
+  dengan `opencode debug skill` — harus tampil 23 skill: 1 bawaan +
+  5 inti + 17 upstream).
 
 ## Cara menambah skill baru
 

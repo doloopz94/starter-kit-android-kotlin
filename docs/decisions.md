@@ -3,6 +3,22 @@
 Setiap keputusan penting dicatat di sini: apa, kenapa, dan apa
 konsekuensinya. Keputusan baru ditambahkan di atas (paling baru dulu).
 
+## ADR-005 — opencode.json + pagar AGENTS.md untuk skill upstream
+
+- **Tanggal:** 2026-10-29
+- **Keputusan:** Tambah `opencode.json` (`skills: ["./.github/skills"]`)
+  agar OpenCode membaca 17 skill upstream tanpa salin; tambah bagian 6
+  di `AGENTS.md` (prioritas, kunci stack, maks 2 skill/tugas) dan peta
+  pemakaian di `README.md`.
+- **Alasan:** Hasil review 29 Oktober: fondasi kit sudah sesuai
+  (mudah belajar, hemat token, clean coding), tetapi skill upstream
+  Compose/Hilt berisiko menggeser stack dan memboroskan token bila
+  tanpa pagar. Config teruji di OpenCode 1.19.5 (`debug skill`: 23
+  skill dari root, 6 dari subfolder).
+- **Konsekuensi:** Mahasiswa harus menjalankan OpenCode dari root
+  proyek dan restart setelah config ditambah. Skill upstream tetap
+  opsional dan hanya dipakai bila plan menyebutkannya.
+
 ## ADR-004 — 17 skill upstream ditambahkan apa adanya di `.github/skills/`
 
 - **Tanggal:** 2026-10-29

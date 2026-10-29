@@ -59,3 +59,24 @@ baru eksekusi, dan tidak pernah asal jadi.
 - Kalau build gagal di laptop pengguna, minta pesan error persisnya;
   jangan menebak penyebabnya dan jangan mengklaim build berhasil
   tanpa bukti.
+
+## 6. Skill upstream dan hemat token (pagar kit ini)
+
+- File `Agent.md` di root adalah panduan upstream berbahasa Inggris
+  (Compose/Hilt). Untuk tugas kuliah, file itu DIABAIKAN. Urutan yang
+  berlaku: `AGENTS.md` ini, lalu dokumen di `docs/`, lalu 5 skill inti
+  di `.agents/skills/`. Skill upstream di `.github/skills/` hanya
+  referensi lanjutan.
+- Stack terkunci untuk tugas kuliah: UI XML + AppCompat, Kotlin 2.0.20,
+  SDK 34/min SDK 24, tanpa database/server. Dilarang memakai Compose,
+  Hilt, Room, Retrofit, atau menaikkan versi tanpa persetujuan pengguna
+  yang ditulis di plan dan dicatat di `docs/decisions.md`.
+- Hemat token: satu tugas = maksimal 2 skill, sebutkan namanya
+  eksplisit di plan. Jangan memuat semua skill, dan jangan memuat
+  skill yang tidak relevan dengan tugas itu. Satu milestone = satu
+  sesi, diff kecil, perbaiki plan dulu bila plan berubah, jangan
+  mengulang eksekusi dari nol.
+- Skill upstream hanya dipakai bila plan menyebutkannya eksplisit,
+  untuk topik lanjutan di luar materi P1–P7 (mis. testing atau
+  performa build). Bila skill upstream bertentangan dengan aturan
+  di atas, aturan di atas yang menang.
