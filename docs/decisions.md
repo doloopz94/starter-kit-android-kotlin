@@ -3,6 +3,25 @@
 Setiap keputusan penting dicatat di sini: apa, kenapa, dan apa
 konsekuensinya. Keputusan baru ditambahkan di atas (paling baru dulu).
 
+## ADR-004 — 17 skill upstream ditambahkan apa adanya di `.github/skills/`
+
+- **Tanggal:** 2026-10-29
+- **Keputusan:** 17 `SKILL.md`, 11 skrip otomasi emulator, dan file
+  `Agent.md` dari repositori
+  `new-silvermoon/awesome-android-agent-skills` (commit
+  `82900eacc8dbe13de93c6310af27b9df4b2bd2f6`, lisensi Apache-2.0)
+  disalin verbatim tanpa edit ke `.github/skills/` dan `Agent.md`.
+  Provenance dicatat di `README.md`.
+- **Alasan:** Referensi modern (Compose, Hilt, Room, Retrofit) untuk
+  pengembangan lanjutan dan proyek sendiri, atas permintaan dosen
+  agar ditambahkan apa adanya.
+- **Konsekuensi:** Opsional, bukan syarat Tugas Akhir/P1–P7. Layout
+  `.github/skills/` dipertahankan agar isi upstream utuh, terpisah
+  dari 5 skill inti di `.agents/skills/`. Bila bertentangan dengan
+  `AGENTS.md`/ADR-001 (XML/AppCompat), `AGENTS.md` yang berlaku
+  untuk tugas kuliah. Skrip emulator butuh ADB/emulator dan tidak
+  dijalankan otomatis. Muat skill per topik saja agar hemat token.
+
 ## ADR-003 — Ikon launcher vector drawable, bukan PNG mipmap
 
 - **Tanggal:** 2026-10-27 (saat menyiapkan versi siap-mahasiswa)

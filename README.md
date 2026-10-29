@@ -112,12 +112,16 @@ kirimkan pesan errornya, jangan ditebak-tebak.
 
 ```
 AGENTS.md                     Aturan kerja untuk AI (plan-first, wajib dibaca AI)
+Agent.md                      Panduan arsitektur upstream (lihat "Skill tambahan dari upstream" di bawah)
 .agents/skills/               5 skill yang dipakai AI di setiap proyek
   kotlin-clean-code/
   android-ui-guidelines/
   activity-lifecycle-navigation/
   input-validation-logic/
   code-review-checklist/
+.github/skills/               17 skill upstream, apa adanya (opsional, lihat di bawah)
+  architecture/  ui/  migration/  performance/
+  concurrency_and_networking/  testing_and_automation/  build_and_tooling/
 docs/
   product-overview.md         Aplikasi apa, untuk siapa, fitur apa
   build-spec.md               Spesifikasi build per fitur
@@ -139,6 +143,39 @@ app/                          Boilerplate aplikasi starter (1 layar)
   src/main/res/values/{strings,colors,themes}.xml
 VERIFY.md                     Hasil verifikasi starter kit ini
 ```
+
+## Skill tambahan dari upstream (opsional, 17 skill)
+
+Folder `.github/skills/` berisi 17 skill yang disalin **apa adanya,
+tanpa edit**, dari repositori
+[new-silvermoon/awesome-android-agent-skills](https://github.com/new-silvermoon/awesome-android-agent-skills)
+(commit `82900eacc8dbe13de93c6310af27b9df4b2bd2f6`, 29 Oktober 2026),
+lisensi Apache License 2.0, beserta file `Agent.md` upstream di root
+proyek dan 11 skrip otomasi emulator di dalam skill
+`android-emulator-skill`. Kategorinya: `architecture` (android-architecture,
+android-viewmodel, android-data-layer), `ui` (compose-ui,
+compose-navigation, coil-compose, android-accessibility), `migration`
+(xml-to-compose-migration, rxjava-to-coroutines-migration), `performance`
+(compose-performance-audit, gradle-build-performance),
+`concurrency_and_networking` (kotlin-concurrency-expert,
+android-coroutines, android-retrofit), `testing_and_automation`
+(android-testing, android-emulator-skill), dan `build_and_tooling`
+(android-gradle-logic).
+
+Skill-skill ini **opsional dan bukan syarat** Tugas Akhir maupun materi
+P1–P7, yang tetap memakai XML/AppCompat sesuai ADR-001. Isinya
+Compose-first dan modern (Hilt, Room, Retrofit) untuk pengembangan
+lanjutan atau proyek sendiri. Bila isinya bertentangan dengan
+`AGENTS.md` atau dokumen kit ini, `AGENTS.md` dan dokumen kit yang
+berlaku untuk tugas kuliah. `Agent.md` upstream berbeda dari
+`AGENTS.md` kit ini: `AGENTS.md` tetap aturan utama kit.
+
+Cara pakai: sebutkan file skillnya ke agent, mis.
+`baca .github/skills/ui/compose-ui/SKILL.md lalu ...`, atau salin
+folder skill yang dibutuhkan ke folder skill bawaan agent yang dipakai
+(mis. `.opencode/skills/` atau `.claude/skills/`). Muat satu topik
+saja per sesi, jangan semua sekaligus. Skrip emulator hanya jalan
+bila ada emulator/ADB dan tidak dijalankan otomatis oleh kit ini.
 
 ## Cara menambah skill baru
 
